@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h3>Изменение контакта</h3>
+    <form method="post" action="UpdateSave">
+        <input type="hidden" name="ID" value="@ViewBag.ContactID"/>
+        ФИО<br />
+        <input type="text" name="Name" value="@ViewBag.ContactName" placeholder="ФИО"/>
+        <br />
+        Телефон
+        <br />
+        <input type="text" name="Phone" value="@ViewBag.ContactPhone" placeholder="Телефон"/>
+        <br />
+        <br />
+        <input type="submit" value="Сохранить изменения" />
+    </form>
+</body>
+</html>

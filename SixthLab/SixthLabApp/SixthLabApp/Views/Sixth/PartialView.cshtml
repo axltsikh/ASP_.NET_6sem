@@ -1,0 +1,13 @@
+﻿@model RepositoryLibrary.Contact
+<div>
+    <div style="display: inline-block; border: 1px solid black; padding:5px; width:100px">@Model.ID</div>
+    <div style="display: inline-block; border: 1px solid black; padding: 5px; width: 100px; margin-left: -5px">@Model.Name</div>
+    <div style="display: inline-block; border: 1px solid black; padding: 5px; width: 100px; margin-left: -5px">@Model.Phone</div>
+    <div style="display: inline-block; border: 1px solid black; padding: 5px; width: 100px; margin-left: -5px">
+        <a href="/Sixth/Update?ID=@Model.ID&Name=@Model.Name&Phone=@Model.Phone">Редактировать</a>
+    </div>
+    <div style="display: inline-block; border: 1px solid black; padding: 5px; width: 100px; margin-left: -5px">
+        <a href="/Sixth/Delete?ID=@Model.ID&Name=@Model.Name&Phone=@Model.Phone">Удалить</a>
+    </div>
+</div>
+

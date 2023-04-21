@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2023-04-15T07:54:13.2293088Z;True|2023-04-15T10:43:04.2059407+03:00;True|2023-03-23T11:14:43.9343275+03:00;True|2023-03-23T11:11:40.4183937+03:00;True|2023-03-23T11:10:42.9564507+03:00;True|2023-03-23T10:45:45.0250751+03:00;True|2023-03-23T10:15:37.8883868+03:00;True|2023-03-23T10:11:07.4882372+03:00;True|2023-03-23T09:58:40.3290230+03:00;True|2023-03-23T09:53:04.6882994+03:00;</History>
+  </PropertyGroup>
+</Project>

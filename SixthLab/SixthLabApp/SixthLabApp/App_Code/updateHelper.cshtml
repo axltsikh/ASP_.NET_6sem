@@ -1,0 +1,15 @@
+﻿@helper updateForm(RepositoryLibrary.Contact contact)
+{
+    <form method="post" action="UpdateSave">
+        <input type="hidden" name="ID" value="@contact.ID" />
+        ФИО<br />
+        <input type="text" name="Name" value="@contact.Name" placeholder="ФИО" />
+        <br />
+        Телефон
+        <br />
+        <input type="text" name="Phone" value="@contact.Phone" placeholder="Телефон" />
+        <br />
+        <br />
+        <input type="submit" value="Сохранить изменения" />
+    </form>
+}

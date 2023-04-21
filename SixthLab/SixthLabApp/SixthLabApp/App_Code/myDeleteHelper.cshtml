@@ -1,0 +1,9 @@
+﻿@helper deleteForm(RepositoryLibrary.Contact contact) { 
+<form method="post" action="DeleteSave">
+    <input type="hidden" name="ID" value="@contact.ID" />
+    <input type="hidden" name="Name" value="@contact.Name" placeholder="ФИО" />
+    <input type="hidden" name="Phone" value="@contact.Phone" placeholder="Телефон" />
+    <br />
+    <input type="submit" value="Подтвердить удаление" />
+</form>
+}

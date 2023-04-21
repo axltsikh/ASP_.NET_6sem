@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ContactContext-Web.config Connection String" description="ContactContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="data source=DESKTOP-1L560B9;Initial Catalog=ThirdLab;Integrated Security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Univ\\\.NET\\FourthLab\\ThirdLab\\ThirdLab\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ContactContext']/@connectionString" />
+  </parameter>
+</parameters>

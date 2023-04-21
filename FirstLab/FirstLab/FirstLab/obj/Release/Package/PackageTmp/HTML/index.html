@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NET</title>
+</head>
+<script>
+    function getResult() {
+        var xmlRequest = new XMLHttpRequest()
+        var x = document.getElementById("X").value;
+        var y = document.getElementById("Y").value;
+        xmlRequest.open('POST', 'localhost/FirstLab/Page?X=' + x.valueOf() + '&Y=' + y.valueOf())
+        xmlRequest.send();
+        xmlRequest.onreadystatechange = function () {
+            if (xmlRequest.readyState != 4) {
+                return
+            }
+            if (xmlRequest.status === 200) {
+                document.getElementById("p1").innerHTML = xmlRequest.responseText
+            } else {
+                console.log('result', xmlRequest.responseText)
+            }
+        }
+    }
+</script>
+<body>
+    X:<br />
+    <input type="number" id="X"/><br />
+    Y:<br />
+    <input type="number" id="Y"/><br />
+    <button onclick="getResult()">Get result</button>
+    <p id="p1"></p>
+</body>
+
+</html>

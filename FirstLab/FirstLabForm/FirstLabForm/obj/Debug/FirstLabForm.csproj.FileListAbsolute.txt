@@ -1,0 +1,10 @@
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\bin\Debug\FirstLabForm.exe.config
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\bin\Debug\FirstLabForm.exe
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\bin\Debug\FirstLabForm.pdb
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.csproj.AssemblyReference.cache
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.Form1.resources
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.Properties.Resources.resources
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.csproj.GenerateResource.cache
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.csproj.CoreCompileInputs.cache
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.exe
+D:\Univ\.NET\FirstLab\FirstLabForm\FirstLabForm\obj\Debug\FirstLabForm.pdb

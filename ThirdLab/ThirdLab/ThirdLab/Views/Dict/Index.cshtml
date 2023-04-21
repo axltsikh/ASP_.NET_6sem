@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+<div style="margin-left: 50px; margin-top: 25px">
+<div>
+    <a href="Dict/Add">Add</a>
+</div>
+<table border="1" cellspacing="0" cellpadding="10">
+    <tr>
+        <td>ID</td>
+        <td>ФИО</td>
+        <td>Номер</td>
+    </tr>
+        @foreach (var contact in ViewBag.Contacts)
+        {
+        <tr>
+            <td>@contact.ID</td>
+            <td>@contact.Name</td>
+            <td>@contact.Phone</td>
+            <td>
+                <a href="Dict/Update?ID=@contact.ID&Name=@contact.Name&Phone=@contact.Phone">Редактировать</a>
+                <a href="Dict/Delete?ID=@contact.ID">Удалить</a>
+            </td>
+        </tr>
+    
+        }
+</table>
+</div>

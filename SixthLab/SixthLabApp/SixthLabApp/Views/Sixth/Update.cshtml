@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/MyMasterView.cshtml";
+}
+@section Header{
+    <h2 align="center" style="color:white">Обновление контакта</h2>
+}
+@updateHelper.updateForm(ViewBag.contact)
+@section Footer{
+    <footer style="background-color:lightskyblue; position:absolute; bottom:0; left:0; width:100%">
+        <h4 style="color:white">Update footer</h4>
+    </footer>
+}
+
