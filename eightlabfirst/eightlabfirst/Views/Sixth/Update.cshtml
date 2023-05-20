@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/MyMasterView.cshtml";
+}
+@section Header{
+    <h2 align="center" style="color:white">Обновление контакта</h2>
+}
+<form method="post" action="UpdateSave">
+    <input type="hidden" name="ID" value="@ViewBag.Contact.ID" />
+    ФИО<br />
+    <input type="text" name="Name" value="@ViewBag.Contact.Name" placeholder="ФИО" />
+    <br />
+    Телефон
+    <br />
+    <input type="text" name="Phone" value="@ViewBag.Contact.Phone" placeholder="Телефон" />
+    <br />
+    <br />
+    <input type="submit" value="Сохранить изменения" />
+</form>
+@section Footer{
+    <footer style="background-color:lightskyblue; position:absolute; bottom:0; left:0; width:100%">
+        <h4 style="color:white">Update footer</h4>
+    </footer>
+}
+

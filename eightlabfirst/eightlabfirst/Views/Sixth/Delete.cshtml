@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/MyMasterView.cshtml";
+}
+@section Header{
+    <h2 align="center" style="color:white">Удаление контакта</h2>
+}
+<form method="post" action="DeleteSave">
+    <input type="hidden" name="ID" value="@ViewBag.Contact.ID" />
+    <input type="hidden" name="Name" value="@ViewBag.Contact.Name" placeholder="ФИО" />
+    <input type="hidden" name="Phone" value="@ViewBag.Contact.Phone" placeholder="Телефон" />
+    <br />
+    <input type="submit" value="Подтвердить удаление" />
+</form>
+@section Footer{
+    <footer style="background-color:gray; position:absolute; bottom:0; left:0; width:100%">
+        <h4 style="color:white">Delete footer</h4>
+    </footer>
+}
+
+

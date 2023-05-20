@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RepositoryLibrary
 {
-    class ContactContext : DbContext
+    public class ContactContext : DbContext
     {
-        public ContactContext() : base("DefaultConnection") { }
+        public ContactContext(DbContextOptions<ContactContext> options)
+            : base(options)
+        {
+            
+        }
         public DbSet<Contact> contacts { get; set; }
     }
 }

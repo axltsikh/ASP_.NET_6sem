@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>eightSecond</name>
+    </assembly>
+    <members>
+        <member name="M:eightSecond.Controllers.MyController.Get">
+            <summary>
+            Get All Users
+            </summary>
+        </member>
+        <member name="M:eightSecond.Controllers.MyController.AddUser(eightSecond.LeraX)">
+            <summary>
+            Add User my description change
+            </summary>
+            <response code="200">User updated</response>
+            <response code="400">User not added</response>
+        </member>
+        <member name="M:eightSecond.Controllers.MyController.GetUser(System.Int32)">
+            <summary>
+            Get User by Id
+            </summary>
+            <param name="id" example="101">The User id</param>
+            <response code="200">User found</response>
+            <response code="400">User not found</response>
+        </member>
+        <member name="M:eightSecond.Controllers.MyController.EditUser(eightSecond.LeraX)">
+            <summary>
+            Update User
+            </summary>
+            <response code="200">User found</response>
+            <response code="400">User not found</response>
+        </member>
+        <member name="M:eightSecond.Controllers.MyController.DeleteUser(System.Int32)">
+            <summary>
+            Delete User by Id
+            </summary>
+            <param name="id" example="101">The User id</param>
+            <response code="200">User found</response>
+            <response code="400">User not found</response>
+        </member>
+        <member name="P:eightSecond.LeraX.Id">
+            <summary>
+            Users Id my add to desc
+            </summary>
+            <example>101</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Firstname">
+            <summary>
+            Users Name
+            </summary>
+            <example>Adam</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Lastname">
+            <summary>
+            Users Surname
+            </summary>
+            <example>Adam Smith</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Email">
+            <summary>
+            Users e-mail    
+            </summary>
+            <example>xxx@yyy.com</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Password">
+            <summary>
+            password
+            </summary>
+            <example>P@$$w0rd</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Status">
+            <summary>
+            active/passive
+            </summary>
+            <example>active/passive</example>
+        </member>
+        <member name="P:eightSecond.LeraX.Role">
+            <summary>
+            admin/customer/HR
+            </summary>
+            <example>customer</example>
+        </member>
+    </members>
+</doc>

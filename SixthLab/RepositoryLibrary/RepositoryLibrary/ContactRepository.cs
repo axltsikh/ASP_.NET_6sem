@@ -5,12 +5,17 @@ using System.Linq;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLibrary
 {
     public class ContactRepository : IPhoneDictionary,IDisposable
     {
-        private ContactContext db = new ContactContext();
+        ContactContext db;
+        public ContactRepository(DbContextOptions<ContactContext> options)
+        {
+            this.db = new ContactContext(options);
+        }
         public void Add(Contact contact)
         {
             db.contacts.Add(contact);
@@ -19,21 +24,21 @@ namespace RepositoryLibrary
 
         public void Delete(Contact contact)
         {
-            bool oldValidateOnSaveEnabled = db.Configuration.ValidateOnSaveEnabled;
             try
             {
-                db.Configuration.ValidateOnSaveEnabled = false;
-
-                var customer = new Contact { ID = contact.ID };
-
-                db.contacts.Attach(customer);
-                db.Entry(customer).State = System.Data.Entity.EntityState.Deleted;
+                db.contacts.Remove(db.contacts.Find(contact.ID));
                 db.SaveChanges();
             }
-            finally
+            catch
             {
-                db.Configuration.ValidateOnSaveEnabled = oldValidateOnSaveEnabled;
+             
             }
+        }
+
+        public void DeleteByID(int id)
+        {
+            db.contacts.Remove(db.contacts.Find(id));
+            db.SaveChanges();
         }
 
         public void Dispose()
@@ -56,10 +61,17 @@ namespace RepositoryLibrary
             return db.contacts;
         }
 
+        public Contact GetByID(int id)
+        {
+            return db.contacts.Find(id);
+        }
+
         public void Update(Contact contact)
         {
-            Debug.WriteLine(contact.ID);
-            db.Entry(contact).State = System.Data.Entity.EntityState.Modified;
+
+            Contact s = db.contacts.Find(contact.ID);
+            s.Name = contact.Name;
+            s.Phone = contact.Phone;
             db.SaveChanges();
         }
 

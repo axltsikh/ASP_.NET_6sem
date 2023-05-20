@@ -43,26 +43,26 @@ namespace RepositoryLibrary
         public IEnumerable<Contact> GetBookList()
         {
             contacts = new List<Contact>();
-            try
-            {
-                using (StreamReader sw = new StreamReader("D:/Univ/.NET/SixthLab/contacts.json"))
-                {
-                    string buffer = sw.ReadToEnd();
-                    contacts = JsonConvert.DeserializeObject<List<Contact>>(buffer);
-                }
-                if (contacts != null)
-                {
-                    counter = contacts[contacts.Count - 1].ID + 1;
-                }
-                else
-                {
-                    contacts = new List<Contact>();
-                }
-            }
-            catch (System.Exception exc)
-            {
-                Debug.WriteLine("No file at path");
-            }
+            //try
+            //{
+            //    using (StreamReader sw = new StreamReader("D:/Univ/.NET/SixthLab/contacts.json"))
+            //    {
+            //        string buffer = sw.ReadToEnd();
+            //        contacts = JsonConvert.DeserializeObject<List<Contact>>(buffer);
+            //    }
+            //    if (contacts != null)
+            //    {
+            //        counter = contacts[contacts.Count - 1].ID + 1;
+            //    }
+            //    else
+            //    {
+            //        contacts = new List<Contact>();
+            //    }
+            //}
+            //catch (System.Exception exc)
+            //{
+            //    Debug.WriteLine("No file at path");
+            //}
             return contacts;
         }
 
@@ -81,6 +81,21 @@ namespace RepositoryLibrary
             {
                 sw.Write(JsonConvert.SerializeObject(contacts, Formatting.Indented));
             }
+        }
+
+        public void DeleteByID(int id)
+        {
+            
+        }
+
+        public void GetByID(int id)
+        {
+           
+        }
+
+        Contact IPhoneDictionary.GetByID(int id)
+        {
+            return new Contact();
         }
     }
 }

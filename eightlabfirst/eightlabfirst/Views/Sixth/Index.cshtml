@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/MyMasterView.cshtml";
+}
+@section Header{
+    <h2 align="center" style="color:white">Список контактов</h2>
+}
+@foreach (RepositoryLibrary.Contact contact in ViewBag.Contacts)
+{
+    @Html.Partial("PartialView", contact);
+}
+@section Footer{
+    <footer style="background-color:black; position:absolute; bottom:0; left:0; width:100%">
+        <h4 style="color:white">Index footer</h4>
+    </footer>
+}
+

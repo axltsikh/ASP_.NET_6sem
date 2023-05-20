@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/MyMasterView.cshtml";
+}
+@section Header{
+    <h2 align="center" style="color:white">Добавление контакта</h2>
+}
+<form method="post" action="/Sixth/AddSave">
+    ФИО<br />
+    <input type="text" name="Name" />
+    <br />
+    Телефон<br />
+    <input type="text" name="Phone" />
+    <br />
+    <br />
+    <input type="submit" value="Сохранить" />
+</form>
+@section Footer{
+    <footer style="background-color:lightpink; position:absolute; bottom:0; left:0; width:100%">
+        <h4 style="color:white">Add footer</h4>
+    </footer>
+}

@@ -13,5 +13,7 @@ namespace RepositoryLibrary
         void Add(Contact item); // создание объекта
         void Update(Contact item); // обновление объекта
         void Delete(Contact contact); // удаление объекта по id
+        void DeleteByID(int id);
+        Contact GetByID(int id);
     }
 }
